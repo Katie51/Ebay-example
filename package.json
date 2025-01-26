@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "test:navigateToCareer": "cypress run --spec 'cypress/e2e/navigateToCareer.cy.js'",
+    "test:searchByWord": "cypress run --spec 'cypress/e2e/searchByWord.cy.js'",
+    "test:searchUsingDropdown": "cypress run --spec 'cypress/e2e/searchUsingDropdown.cy.js'",
+    "cy:run": "cypress run --browser chrome",
+    "cy:parallel": "cypress-parallel -s cy:run -t 5 -d 'cypress/e2e/**/*.cy.js' -e '**/*.DS_Store'"
+  },
+  "devDependencies": {
+    "cypress": "^14.0.0",
+    "cypress-parallel": "^0.14.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.4.0"
+  }
+}
