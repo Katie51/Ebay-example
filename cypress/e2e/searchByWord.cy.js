@@ -1,10 +1,10 @@
 import StartingPage from "../fixtures/page_object/StartingPage";
 import SearchResult from "../fixtures/page_object/SearchResult";
-import data from "../fixtures/data.json"
+import data from "../fixtures/data.json";
 
 describe('Search', () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit('/');
   })
 
   describe('Search Field Tests', () => {
