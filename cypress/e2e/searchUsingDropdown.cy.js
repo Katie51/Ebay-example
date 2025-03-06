@@ -1,6 +1,6 @@
 import SearchResult from "../fixtures/page_object/SearchResult";
 import StartingPage from "../fixtures/page_object/StartingPage";
-
+import data from "../fixtures/data.json";
 
 describe('Search with dropDown', () => {
     beforeEach(() => {
@@ -17,10 +17,10 @@ describe('Search with dropDown', () => {
 
     it('should find Car Toy', () => {
 
-        StartingPage.searchField.click().type('Car');
+        StartingPage.searchField.click().type(data.toys);
         StartingPage.dropDown.select('Toys & Hobbies');
         StartingPage.searchButton.click();
-        SearchResult.SearchItem.should("be.visible").and("contain", 'Car');
+        SearchResult.SearchItem.should("be.visible").and("contain", 'car');
         
     });
 })  
