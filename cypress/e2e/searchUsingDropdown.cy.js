@@ -4,7 +4,7 @@ import StartingPage from "../fixtures/page_object/StartingPage";
 
 describe('Search with dropDown', () => {
     beforeEach(() => {
-        cy.visit('/')
+        cy.visit('/');
     })
 
     it('should navigate to the Toys section', () => {
