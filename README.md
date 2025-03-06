@@ -1,8 +1,8 @@
-eBay Example Project
+<h3>eBay Example Project</h3>
 
 This project demonstrates automated testing for the eBay platform using Cypress and the Page Object Model (POM) design pattern. The tests are designed to be run in parallel using GitHub Actions for continuous integration.
 
-Key Features:
+<h4>Key Features:</h4>
 
 navigateToCareer Test: Automates navigation to eBay's career page and the creation of job alerts. It uses the faker library to generate random emails and pulls job positions from a data.json file for dynamic testing.
 
