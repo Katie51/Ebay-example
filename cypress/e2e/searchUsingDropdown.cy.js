@@ -17,7 +17,7 @@ describe('Search with dropDown', () => {
 
     it('should find Car Toy', () => {
 
-        StartingPage.searchField.click().type(data.toys);
+        StartingPage.searchField.click().type(data.toys[0]);
         StartingPage.dropDown.select('Toys & Hobbies');
         StartingPage.searchButton.click();
         SearchResult.SearchItem.should("be.visible").and("include", 'car');
