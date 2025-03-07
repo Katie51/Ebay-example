@@ -20,7 +20,7 @@ describe('Search with dropDown', () => {
         StartingPage.searchField.click().type(data.toys);
         StartingPage.dropDown.select('Toys & Hobbies');
         StartingPage.searchButton.click();
-        SearchResult.SearchItem.should("be.visible").and("contain", 'car');
+        SearchResult.SearchItem.should("be.visible").and("include", 'car');
         
     });
 })  
