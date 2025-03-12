@@ -8,19 +8,15 @@ describe('Search with dropDown', () => {
     })
 
     it('should navigate to the Toys section', () => {
-
         StartingPage.shopByCategory.click();
         StartingPage.toysAndHobbies.click();
         SearchResult.ToysAndHobbiesSection.should('have.text', 'Toys & Hobbies');
-
     });
 
     it('should find Car Toy', () => {
-
         StartingPage.searchField.click().type(data.toys[0]);
         StartingPage.dropDown.select('Toys & Hobbies');
         StartingPage.searchButton.click();
         SearchResult.SearchItem.should("be.visible").and("contain", 'car');
-        
     });
 })  
