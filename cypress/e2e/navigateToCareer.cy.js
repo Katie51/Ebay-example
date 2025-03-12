@@ -10,7 +10,7 @@ const randomPosition = data.positions[Math.floor(Math.random() * data.positions.
 
 describe('Navigate to Careers page on eBay', () => {
 
-  it('should navigate to the Careers', () => {
+  it('Should navigate to the Careers', () => {
     cy.visit('/')
     StartingPage.scrollToBottom;
     StartingPage.careersLink.should('be.visible').click();
@@ -21,13 +21,11 @@ describe('Navigate to Careers page on eBay', () => {
   });
 
   it('Create Job Alert', () => {
-
     CareersPages.visit;
     CareersPages.jobAlertInputField.type(randomPosition).type('{enter}');
     CareersPages.verifyFilters.should('contain', 'Filters');
     CareersPages.enterEmail.should('be.visible').type(email);
     CareersPages.createJobsAlertButton.click();
     CareersPages.verifyEmailVerification.should('be.visible');
-
   });
 });
