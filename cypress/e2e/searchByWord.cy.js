@@ -8,22 +8,19 @@ describe('Search', () => {
   })
 
   describe('Search Field Tests', () => {
-    it('Type "brush" in search field and verify', () => {
-      
+    it('Should search "brush" in search field and verify it', () => {  
       StartingPage.searchField.click().type(data.items[0]).type('{enter}');
       StartingPage.searchField.should('have.value', data.items[0]);
       SearchResult.SearchingResult.should('contain', data.items[0]);
     });
 
-    it('Type "mirror" in search field and verify', () => {
-     
+    it('Should search "mirror" in search field and verify it', () => {
       StartingPage.searchField.click().type(data.items[1]).type('{enter}');
       StartingPage.searchField.should('have.value', data.items[1]);
       SearchResult.SearchingResult.should('contain', data.items[1]);
     });
 
-    it('Type "bag" in search field and verify', () => {
-
+    it('Should search "bag" in search field and verify it', () => {
       StartingPage.searchField.click().type(data.items[2]).type('{enter}');
       StartingPage.searchField.should('have.value', data.items[2]);
       SearchResult.SearchingResult.should('contain', data.items[2]);
