@@ -7,13 +7,13 @@ describe('Search with dropDown', () => {
         cy.visit('/');
     })
 
-    it('should navigate to the Toys section', () => {
+    it('Should navigate to the Toys section', () => {
         StartingPage.shopByCategory.click();
         StartingPage.toysAndHobbies.click();
         SearchResult.ToysAndHobbiesSection.should('have.text', 'Toys & Hobbies');
     });
 
-    it('should find Car Toy', () => {
+    it('Should find Car Toy', () => {
         StartingPage.searchField.click().type(data.toys[0]);
         StartingPage.dropDown.select('Toys & Hobbies');
         StartingPage.searchButton.click();
